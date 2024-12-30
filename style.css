@@ -1,7 +1,15 @@
 :root {
   --font-sizeTitle: 280px;
-  --widthDiplBack: 670px;
-  --heightDiplBack: 184px;
+  --whoamiTextSize: 24px;
+  --titreSize: 54px; 
+  --svgScale: 0.85;
+  --whoamiTitreCol: #f9c87d;
+  --backScale: scale(0.8);
+  --fontSizeTableMat: 25px;
+  --titreMarginTopPrenom: -30px;
+  --titreMarginTopNom: -150px;
+  --titreMarginBottomNom: -44px;
+  --imgWidth: 350px
 }
 
 body {
@@ -13,7 +21,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 25px;
+  font-size: var(--fontSizeTableMat);
   color: blanchedalmond;
   white-space-collapse: preserve-spaces;
   margin: 0.05%;
@@ -24,10 +32,10 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: calc(var(--font-sizeTitle) + 40px);
+  font-size: calc(var(--font-sizeTitle) + 20px);
   color: blanchedalmond;
   margin: 0;
-  margin-top: -30px;
+  margin-top: var(--titreMarginTopPrenom);
 }
 
 .sourceTitre {
@@ -37,8 +45,8 @@ body {
   font-style: normal;
   color: blanchedalmond;
   font-size: var(--font-sizeTitle);
-  margin-top: -150px;
-  margin-bottom: -44px;
+  margin-top: var(--titreMarginTopNom);
+  margin-bottom: var(--titreMarginBottomNom);
 }
 
 .titre {
@@ -74,7 +82,7 @@ a {
   font-weight: 400;
   font-style: normal;
   color: blanchedalmond;
-  font-size: 54px;
+  font-size: var(--titreSize);
   margin: 0;
   margin-bottom: -40px;
   margin-left: 13%;
@@ -97,6 +105,18 @@ a {
 
 .whoamiLine div {
   margin-bottom: 5%;
+  transform: var(--backScale);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whoamiLine div p {
+  text-align: center;
+  font-size: var(--whoamiTextSize);
+  font-weight: bold;
+  font-family: "Source Serif 4", serif;
+  color: darkblue;
 }
 
 
@@ -104,137 +124,109 @@ a {
   width: 591.7px;
   height: 279.5px;
   background-image: url(img/backAlternance.svg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .alternance p {
   margin: 50px;
-  margin-top: 115px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: "Source Serif 4", serif;
-  color: darkblue;
+  margin-top: 125px;
 }
 
 .but {
   width: 595px;
   height: 305px;
   background-image: url(img/backBUT.svg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .but p {
   margin: 50px;
-  margin-top: 140px;
-  text-align: center;
-  font-size: 29.5px;
-  font-weight: bold;
-  font-family: "Source Serif 4", serif;
-  color: darkblue;
+  margin-top: 160px;
 }
 
 .perso {
   width: 463px;
   height: 180px;
   background-image: url(img/backPerso.svg);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
-.persoTitre {
+.perso .persoTitre {
   font-family: "Parisienne", "serif";
-  font-size: 76px;
+  font-size: var(--titreSize);
   margin: 0px;
-  font-weight: bold;
+  transform: translateY(-25px) rotate(10deg);
+  color: var(--whoamiTitreCol);
   letter-spacing: -1.5px;
-  transform: translateY(60px) rotate(10deg);
-  color: blanchedalmond;
-}
-
-.perso p {
-  color: darkblue;
-  font-size: 48px;
 }
 
 .perso .c {
   font-family: "Pacifico", serif;
-  transform: translate(30px, -40px);
+  font-size: 30px;
+  transform: translate(-100px, -60px);
 }
 
 .perso .r {
   font-family: 'Times New Roman', serif;
-  font-size: 36px;
   font-weight: 600;
-  transform: translate(-20px, 40px);
+  transform: translate(100px, -120px);
 }
 
 .perso .a {
   font-family: "Fira Code", serif;
   font-weight: 700;
-  font-size: 36px;
-  transform: translate(-70px);
+  font-size: var(--whoamiTextSize);
+  transform: translate(-40px, -165px);
+  letter-spacing: -1px;
 }
 
 .diplome {
-  width: calc(var(--widthDiplBack));
-  height: calc(var(--heightDiplBack));
-
+  width: 670px;
+  height: 184px;
   background-image: url(img/backDiplome.svg);
-  display: flex;
-  flex-direction: column;
   align-items: start;
 }
 
 .diplome .diplomeTitre {
   font-family: "Parisienne", "serif";
-  font-size: 76px;
+  font-size: var(--titreSize);
   margin: 0px;
-  transform: translateY(-40px) rotate(-4deg);
-  color: blanchedalmond;
+  transform: translate(-140px, -30px) rotate(-5deg);
+  color: var(--whoamiTitreCol);
   letter-spacing: -1.5px;
 }
 
-.diplome p {
-  font-size: 28px;
-  font-weight: bold;
-  font-family: "Source Serif 4", serif;
-  color: darkblue;
-  margin-top: 60px;
-  margin-left: 50px;
-  transform: translateY(-95px);
+.diplome #textLeft {
+  margin: 0px;
+  text-align: left;
+  transform: translate(-30px, 0px);
 }
 
 .contact {
   width: 564px;
   height: 298px;
   background-image: url(img/backMeContacter.svg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .contact .contactTitre {
   font-family: "Parisienne", "serif";
-  font-size: 76px;
+  font-size: var(--titreSize);
   margin: 0px;
-  transform: translate(80px, -24px) rotate(-16deg);
-  color: blanchedalmond;
+  transform: translate(80px, -4px) rotate(-16deg);
+  color: var(--whoamiTitreCol);
   letter-spacing: -1.5px;
 }
 
 .contact p {
-  font-size: 28px;
-  font-weight: bold;
-  font-family: "Source Serif 4", serif;
-  color: darkblue;
   margin: 0;
-  margin-top: 7px;
+  transform: translate(0px, 50px);
+}
+
+.contact p a {
+  text-decoration: underline;
+}
+
+.contact p a:hover {
+  width: max-content;
+  background-color: #FFD495;
+  transition: .5s;
 }
 
 
@@ -284,6 +276,7 @@ a {
 }
 
 .projetDesc h2 {
+  margin-top: 0px;
   font-family: "Crimson Text", serif;
   font-weight: 600;
   font-style: normal;
@@ -307,8 +300,8 @@ a {
 }
 
 .projet img {
-  width: 40%;
-  height: 40%;
+  width: var(--imgWidth);
+  height: auto;
   border: #FFD495 solid 7px;
   margin: 2%;
 }
@@ -320,16 +313,16 @@ a {
   flex-direction: row;
   
   /*pour mettre la description du projet avant la photo 
-  quand l'ecrant est trop petit*/
-  flex-wrap: wrap-reverse;
+  quand l'ecran est trop petit*/
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 0;
   background-color: #00006C;
 }
 
 .projetReverse img {
-  width: 35%;
-  height: 35%;
+  width: var(--imgWidth);
+  height:auto;
   border: #FFD495 solid 7px;
   margin: 2%;
 }
@@ -350,11 +343,12 @@ a {
 }
 
 .soon {
+  margin-top: 5%;
   width: 35%;
   height: 35%;
   background-color: #FFD495;
   text-align: center;
-  color: #00006C;
+  color: darkblue;
   font-family: "Pacifico", serif;
   font-weight: 400;
   font-style: normal;
@@ -368,11 +362,13 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 54px;
+  margin-top: 0px;
   letter-spacing: -1.5px;
   transform: translateY(90px);
 }
 
 footer {
+  padding-top: 15px;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -383,10 +379,486 @@ footer {
 }
 
 footer p {
+  margin: 0px;
   font-family: "Crimson Text", serif;
   font-weight: 600;
   font-style: normal;
   font-size: 20px;
   color: #FFD495;
+}
 
+footer p a:hover {
+  width: max-content;
+  background-color: darkblue;
+  transition: .5s;
+}
+
+@media screen and (max-width: 1200px){
+  :root {
+    --font-sizeTitle: 280px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: -30px;
+    --titreMarginTopNom: -150px;
+    --titreMarginBottomNom: -44px;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  :root {
+    --font-sizeTitle: 260px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -140px;
+    --titreMarginBottomNom: -44px;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  :root {
+    --font-sizeTitle: 250px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -130px;
+    --titreMarginBottomNom: -44px;
+  }
+}
+
+@media screen and (max-width: 1050px){
+  :root {
+    --font-sizeTitle: 240px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -125px;
+    --titreMarginBottomNom: -40px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  :root {
+    --font-sizeTitle: 225px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -120px;
+    --titreMarginBottomNom: -30px;
+  }
+}
+
+@media screen and (max-width: 950px){
+  :root {
+    --font-sizeTitle: 210px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -115px;
+    --titreMarginBottomNom: -20px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  :root {
+    --font-sizeTitle: 195px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -110px;
+    --titreMarginBottomNom: -10px;
+  }
+}
+
+@media screen and (max-width: 850px){
+  :root {
+    --font-sizeTitle: 185px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -105px;
+    --titreMarginBottomNom: 0px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  :root {
+    --font-sizeTitle: 175px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -100px;
+    --titreMarginBottomNom: +10px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  :root {
+    --font-sizeTitle: 165px;
+    --whoamiTextSize: 24px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.7);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -95px;
+    --titreMarginBottomNom: +20px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  :root {
+    --font-sizeTitle: 155px;
+    --whoamiTextSize: 10px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.7);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -90px;
+    --titreMarginBottomNom: +40px;
+  }
+}
+
+@media screen and (max-width: 650px){
+  :root {
+    --font-sizeTitle: 145px;
+    --whoamiTextSize: 20px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.7);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -85px;
+    --titreMarginBottomNom: +60px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  :root {
+    --font-sizeTitle: 135px;
+    --whoamiTextSize: 20px;
+    --titreSize: 54px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.7);
+    --fontSizeTableMat: 20px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -80px;
+    --titreMarginBottomNom: +60px;
+  }
+
+  /*le texte de diplome dépace*/
+  .diplome #textLeft {
+    margin: 0px;
+    text-align: center;
+    transform: translate(5px, 0px);
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 550px){
+  :root {
+    --font-sizeTitle: 125px;
+    --whoamiTextSize: 10px;
+    --titreSize: 34px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 13px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -75px;
+    --titreMarginBottomNom: +70px;
+  }
+
+  .alternance {
+    width: 299px;
+    height: 141px;
+    background-image: url(img/backAlternanceMin.svg);
+    margin-top: 50px;
+  }
+  
+  .alternance p {
+    margin: 20px;
+    margin-top: 65px;
+    font-size: var(--whoamiTextSize);
+  }
+
+  .but {
+    width: 297px;
+    height: 152px;
+    background-image: url(img/backButMin.svg);
+    margin-top: 0px;
+  }
+  
+  .but p {
+    margin: 20px;
+    margin-top: 80px;
+  }
+
+  .perso {
+    width: 299px;
+    height: 116px;
+    background-image: url(img/backPersoMin.svg);
+  }
+  
+  .perso .persoTitre {
+    font-family: "Parisienne", "serif";
+    font-size: 34px;
+    margin: 0px;
+    transform: translateY(-15px) rotate(10deg);
+    color: var(--whoamiTitreCol);
+    letter-spacing: -0.7px;
+  }
+  
+  .perso .c {
+    font-family: "Pacifico", serif;
+    font-size: calc(var(--whoamiTextSize)+5px);
+    transform: translate(-100px, -30px);
+  }
+  
+  .perso .r {
+    font-family: 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: (var(--whoamiTextSize)+5px);
+    transform: translate(60px, -65px);
+  }
+  
+  .perso .a {
+    font-family: "Fira Code", serif;
+    font-weight: 700;
+    font-size: calc(var(--whoamiTextSize)+5px);
+    transform: translate(-40px, -95px);
+    letter-spacing: -1px;
+  }
+  
+  .diplome {
+    width: 311px;
+    height: 86px;
+    background-image: url(img/backDiplomeMin.svg);
+    align-items: start;
+  }
+  
+  .diplome .diplomeTitre {
+    font-family: "Parisienne", "serif";
+    font-size: 34px;
+    margin: 0px;
+    transform: translate(-100px, -20px) rotate(-5deg);
+    color: var(--whoamiTitreCol);
+    letter-spacing: -0.7px;
+  }
+  
+  .diplome #textLeft {
+    margin: 0px;
+    text-align: left;
+    transform: translate(-5px, -10px);
+    font-size: 12px;
+  }
+  
+  .contact {
+    width: 285px;
+    height: 150px;
+    background-image: url(img/backMeContacterMin.svg);
+  }
+  
+  .contact .contactTitre {
+    font-family: "Parisienne", "serif";
+    font-size: var(--titreSize);
+    margin: 0px;
+    transform: translate(50px, -12px) rotate(-16deg);
+    color: var(--whoamiTitreCol);
+    letter-spacing: -0.7px;
+  }
+  
+  .contact p {
+    margin: 0;
+    transform: translate(0px, 20px);
+  }
+
+  .mesProjets {
+    font-size: 30px;
+  }
+
+  .projet h2 {
+    font-size: 15px;
+  }
+
+  .projet .projetDesc p {
+    font-size: 7px;
+  }
+
+  .projet .projetDesc ul {
+    font-size: 7px;
+    margin-top: -7px;
+  }
+
+  .projet .projetDesc a {
+    font-size: 9px;
+    margin-top: 0px;
+  }
+
+  .projet img {
+    width: 150px;
+    border: 2px solid #FFD495;
+  }
+
+  .projetReverse h2 {
+    font-size: 15px;
+  }
+
+  .projetReverse .projetDesc p {
+    font-size: 7px;
+  }
+
+  .projetReverse .projetDesc ul {
+    font-size: 7px;
+    margin-top: -7px;
+  }
+
+  .projetReverse .projetDesc a {
+    font-size: 8px;
+    margin-top: 0px;
+  }
+
+  .projetReverse .projetDesc p a {
+    font-size: 8px;
+    margin-top: 0px;
+  }
+
+  .projetReverse img {
+    width: 150px;
+    border: 2px solid #FFD495;
+  }
+
+  .soon {
+    font-size: 9px;
+  }
+
+  .footerTitre {
+    font-size: 24px;
+    transform: translateY(40px);
+    letter-spacing: -0.45px;
+  }
+
+  footer p {
+    font-size: 10px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  :root {
+    --font-sizeTitle: 110px;
+    --whoamiTextSize: 10px;
+    --titreSize: 34px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 10px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -70px;
+    --titreMarginBottomNom: +85px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  :root {
+    --font-sizeTitle: 100px;
+    --whoamiTextSize: 10px;
+    --titreSize: 34px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 8px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -60px;
+    --titreMarginBottomNom: +85px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  :root {
+    --font-sizeTitle: 60px;
+    --whoamiTextSize: 10px;
+    --titreSize: 24px; 
+    --whoamiTitreCol: #f9c87d;
+    --backScale: scale(0.8);
+    --fontSizeTableMat: 5px;
+    --titreMarginTopPrenom: 0px;
+    --titreMarginTopNom: -40px;
+    --titreMarginBottomNom: +85px;
+  }
+
+  .perso .persoTitre {
+    font-family: "Parisienne", "serif";
+    font-size: 34px;
+    margin: 0px;
+    transform: translateY(-20px) rotate(10deg);
+    color: var(--whoamiTitreCol);
+    letter-spacing: -0.7px;
+  }
+
+  .perso .c {
+    font-family: "Pacifico", serif;
+    font-size: calc(var(--whoamiTextSize)+5px);
+    transform: translate(-65px, -30px);
+  }
+
+  .contact .contactTitre {
+    font-family: "Parisienne", "serif";
+    font-size: var(--titreSize);
+    margin: 0px;
+    transform: translate(50px, 7px) rotate(-16deg);
+    color: var(--whoamiTitreCol);
+    letter-spacing: -0.7px;
+  }
+  
+  .contact p {
+    margin: 0;
+    transform: translate(0px, 35px);
+  }
+
+  .diplome .diplomeTitre {
+    font-family: "Parisienne", "serif";
+    font-size: 34px;
+    margin: 0px;
+    transform: translate(-60px, -20px) rotate(-5deg);
+    color: var(--whoamiTitreCol);
+    letter-spacing: -0.7px;
+  }
+  
+  .diplome #textLeft {
+    margin: 0px;
+    text-align: left;
+    transform: translate(-5px, -10px);
+    font-size: 9px;
+  }
+
+  footer p {
+    margin: 2px;
+  }
 }
