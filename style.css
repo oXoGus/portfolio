@@ -23,7 +23,7 @@ body {
   font-style: normal;
   font-size: var(--fontSizeTableMat);
   color: blanchedalmond;
-  white-space-collapse: preserve-spaces;
+  white-space-collapse: preserve;
   margin: 0.05%;
 }
 
