@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Code&family=Pacifico&family=Parisienne&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <title>Mathis DINTRAT</title>
+</head>
+<body>
+    
+    <div class="titre">
+        <p class="parisienneTitre">Mathis</p>
+        <p class="sourceTitre">DINTRAT</p>
+    </div>
+
+    <!-- flèche vers le bas pour dire aux utilisateur de scroller-->
+    <div class="fleche" style>
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="#f9c87d" xmlns="http://www.w3.org/2000/svg"><rect x="8.48531" y="14.1421" width="32" height="12" transform="rotate(45 8.48531 14.1421)" fill="#FFEBCD"/><rect x="14.1422" y="36.7696" width="32" height="12" transform="rotate(-45 14.1422 36.7696)" fill="#FFEBCD"/></svg>
+    </div>
+
+    <div class="navbar">
+        <a id="selected" href="competences.html#competencesContainer">Mes competences</a>
+        <a  href="index.html#selected">Présentation</a>
+        <a href="projets.html#selected">Mes projets</a>
+    </div>
+
+
+    <div id="popupJava" class="overlayBlur" onclick="closePopup(event, 'popupJava')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/java.svg" alt="">
+            <h1>Java</h1>
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+            <li><a href="projets.html?id=Yams">Yam's</a></li>
+            <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupTailwindCSS" class="overlayBlur" onclick="closePopup(event, 'popupTailwindCSS')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/Tailwind_CSS_Logo 1.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projet :</h1>
+            <ul>
+                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupC++" class="overlayBlur" onclick="closePopup(event, 'popupC++')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/c++.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="https://github.com/oXoGus/PAMI2025">PAMI - coupe de France de robotique</a></li>
+                <li><a href="https://github.com/oXoGus/SIN-projet-space-invader">Space invader</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupC" class="overlayBlur" onclick="closePopup(event, 'popupC')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/C.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="https://github.com/oXoGus/calcPolyC">calculatrice de polynomes</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupJS" class="overlayBlur" onclick="closePopup(event, 'popupJS')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/js.svg" alt="">
+            <h1>JavaScript</h1>
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+                <li><a href="projets.html?id=Daktari">Daktari</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupPHP" class="overlayBlur" onclick="closePopup(event, 'popupPHP')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/php.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=Daktari">Daktari</a></li>
+                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupPostgreSQL" class="overlayBlur" onclick="closePopup(event, 'popupPostgreSQL')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/postgresql.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=Daktari">Daktari</a></li>
+                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupPython" class="overlayBlur" onclick="closePopup(event, 'popupPython')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/Python.svg" alt="">
+            <h1>Python</h1>
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=tetris">tetris</a></li>
+                <li><a href="https://github.com/oXoGus/SAE-2.02">Algo sur des graphs</a></li>
+                <li><a href="projets.html?id=GDCBot">GDCBot</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupReact" class="overlayBlur" onclick="closePopup(event, 'popupReact')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/react.svg" alt="">
+            <h1>React</h1>
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
+                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupNode" class="overlayBlur" onclick="closePopup(event, 'popupNode')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/nodejs.svg" alt="">
+            <h1>Node.js</h1>
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
+                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupLinux" class="overlayBlur" onclick="closePopup(event, 'popupLinux')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/linux.svg" alt="">
+            <h1>Linux</h1>
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projet :</h1>
+            <ul>
+                <li>tous les projets ont été réalisé sur linux</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupHTML" class="overlayBlur" onclick="closePopup(event, 'popupHTML')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/HTML.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Intermédiaire</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+                <li><a href="projets.html?id=Daktari">Daktari</a></li>
+                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
+                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupCSS" class="overlayBlur" onclick="closePopup(event, 'popupCSS')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/CSS.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Intermédiaire</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+                <li><a href="projets.html?id=Daktari">Daktari</a></li>
+                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
+                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupJavaFX" class="overlayBlur" onclick="closePopup(event, 'popupJavaFX')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <img src="img/JavaFX.svg" alt="">
+        </div>
+        <div>
+            <h1>Niveau : </h1>
+            <p>Débutant</p>
+            <h1 style="margin-top: 20px;">Projet :</h1>
+            <ul>
+                <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="competencesContainer">
+        <h1>Mes compétences techniques</h1>
+        <div id="javaBtn" tabindex="0" role="button" onclick="openPopup('popupJava')" class="competence">
+            <img src="img/java.svg" alt="">
+        </div>
+        <div id="Tailwind_CSSBtn" tabindex="0" role="button" onclick="openPopup('popupTailwindCSS')" class="competence">
+            <img src="img/Tailwind_CSS.svg" alt="">
+        </div>
+        <div id="c++Btn" tabindex="0" role="button" onclick="openPopup('popupC++')" class="competence">
+            <img src="img/c++.svg" alt="">
+        </div>
+        <div id="CBtn" tabindex="0" role="button" onclick="openPopup('popupC')" class="competence">
+            <img src="img/C.svg" alt="">
+        </div>
+        <div id="jsBtn" tabindex="0" role="button" onclick="openPopup('popupJS')" class="competence">
+            <img src="img/js.svg" alt="">
+        </div>
+        <div id="phpBtn" tabindex="0" role="button" onclick="openPopup('popupPHP')" class="competence">
+            <img src="img/php.svg" alt="">
+        </div>
+        <div id="postgresqlBtn" tabindex="0" role="button" onclick="openPopup('popupPostgreSQL')" class="competence">
+            <img src="img/postgresql.svg" alt="">
+        </div>
+        <div id="pythonBtn" tabindex="0" role="button" onclick="openPopup('popupPython')" class="competence">
+            <img src="img/Python.svg" alt="">
+        </div>
+        <div id="reactBtn" tabindex="0" role="button" onclick="openPopup('popupReact')" class="competence">
+            <img src="img/react.svg" alt="">
+        </div>
+        <div id="nodeBtn" tabindex="0" role="button" onclick="openPopup('popupNode')" class="competence">
+            <img src="img/nodejs.svg" alt="">
+        </div>
+        <div id="linuxBtn" tabindex="0" role="button" onclick="openPopup('popupLinux')" class="competence">
+            <img src="img/linux.svg" alt="">
+        </div>
+        <div id="htmlBtn" tabindex="0" role="button" onclick="openPopup('popupHTML')" class="competence">
+            <img src="img/HTML.svg" alt="">
+        </div>
+        <div id="cssBtn" tabindex="0" role="button" onclick="openPopup('popupCSS')" class="competence">
+            <img src="img/CSS.svg" alt="">
+        </div>
+        <div id="javafxBtn" tabindex="0" role="button" onclick="openPopup('popupJavaFX')" class="competence">
+            <img src="img/JavaFX.svg" alt="">
+        </div>
+    </div>
+
+
+    <div id="popupRealiser" class="overlayBlur" onclick="closePopup(event, 'popupRealiser')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <p>Gérer</p>
+        </div>
+        <div>
+            <h1>Niveau 1 :</h1>
+            <p>Développer des applications informatiques simples</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+            <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+            <li><a href="projets.html?id=Daktari">Daktari</a></li>
+            <li><a href="projets.html?id=Yams">Yam's</a></li>
+            <li><a href="projets.html?id=Tetris">Tetris</a></li>
+            <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+            <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupCollaborer" class="overlayBlur" onclick="closePopup(event, 'popupCollaborer')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <p>Collaborer</p>
+        </div>
+        <div>
+            <h1>Niveau 1 :</h1>
+            <p>Identifier ses aptitudes pour travailler dans une équipe</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+            <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+            <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupGerer" class="overlayBlur" onclick="closePopup(event, 'popupGerer')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <h1>Gérer</h1>
+        </div>
+        <div>
+            <h1>Niveau 1 :</h1>
+            <p>Concevoir et mettre en place une base de données à partir d’un cahier des charges </p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+                <li><a href="projets.html?id=Daktari">Daktari</a></li>
+                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupAdministrer" class="overlayBlur" onclick="closePopup(event, 'popupAdministrer')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <p>Administrer</p>
+        </div>
+        <div>
+            <h1>Niveau 1 :</h1>
+            <p>Installer et configurer un poste de travail</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+            <li>DualBoot linux</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupOptimiser" class="overlayBlur" onclick="closePopup(event, 'popupOptimiser')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <p>Optimiser</p>
+        </div>
+        <div>
+            <h1>Niveau 1 :</h1>
+            <p>Appréhender et construire des algorithmes</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+            <li><a href="https://github.com/oXoGus/SAE-2.02">Algo sur des graphs</a></li>
+            <li><a href="projets.html?id=Tetris">Tetris</a></li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    
+    <div id="popupConduire" class="overlayBlur" onclick="closePopup(event, 'popupConduire')">
+        <div class="popup" onclick="event.stopPropagation()">
+        <div>
+            <p>Conduire</p>
+        </div>
+        <div>
+            <h1>Niveau 1 :</h1>
+            <p>Identifier les besoins métiers des clients et des utilisateurs</p>
+            <h1 style="margin-top: 20px;">Projets :</h1>
+            <ul>
+                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
+                <li><a href="projets.html?id=Daktari">Daktari</a></li>
+                <li><a href="projets.html?id=Yams">Yam's</a></li>
+                <li><a href="projets.html?id=Tetris">Tetris</a></li>
+                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
+                <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+  
+
+    
+
+    <div id="competencesContainer" class="competencesContainer">
+        <h1 id="compBUT">Compétences du BUT INFO </h1>
+        <div id="gererBtn" tabindex="0" role="button" onclick="openPopup('popupGerer')" class="competenceBO">
+            <p>Gérer</p>
+        </div>
+        <div id="collaborerBtn" tabindex="0" role="button" onclick="openPopup('popupCollaborer')" class="competenceBO">
+            <p>Collaborer</p>        
+        </div>
+        <div id="realiserBtn" tabindex="0" role="button" onclick="openPopup('popupRealiser')" class="competenceBO">
+            <p>Réaliser</p>
+        </div>
+        <div id="administrerBtn" tabindex="0" role="button" onclick="openPopup('popupAdministrer')" class="competenceBO">
+            <p>Administrer</p>
+        </div>
+        <div id="optimiserBtn" tabindex="0" role="button" onclick="openPopup('popupOptimiser')" class="competenceBO">
+            <p>Optimiser</p>
+        </div>
+        <div id="conduireBtn" tabindex="0" role="button" onclick="openPopup('popupConduire')" class="competenceBO">
+            <p>Conduire</p>
+        </div>
+    </div>
+    
+
+
+    <p class="footerTitre">Me contacter</p>
+    <footer>
+        <p><a href="mailto:mathis.dintrat@gmail.com">mathis.dintrat@gmail.com</a></p>
+        <p><a href="/portfolio/CV - Mathis DINTRAT.pdf" download="/portfolio/CV - Mathis DINTRAT.pdf" target="_blank" rel="noopener noreferrer">téléchager mon CV</a></p>
+        <p><a href="https://www.linkedin.com/in/mathis-dintrat-09747331b/" target="_blank" rel="noopener noreferrer">mon Linkedin</a></p>
+        <p>tel : 06 24 26 03 22</p>
+    </footer>
+    <script src="script/popup.js"></script>
+</body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,18 +17,15 @@
 
     <!-- flèche vers le bas pour dire aux utilisateur de scroller-->
     <div class="fleche" style>
-        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8.48531" y="14.1421" width="32" height="12" transform="rotate(45 8.48531 14.1421)" fill="#FFEBCD"/><rect x="14.1422" y="36.7696" width="32" height="12" transform="rotate(-45 14.1422 36.7696)" fill="#FFEBCD"/></svg>
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="#f9c87d" xmlns="http://www.w3.org/2000/svg"><rect x="8.48531" y="14.1421" width="32" height="12" transform="rotate(45 8.48531 14.1421)" fill="#FFEBCD"/><rect x="14.1422" y="36.7696" width="32" height="12" transform="rotate(-45 14.1422 36.7696)" fill="#FFEBCD"/></svg>
     </div>
 
-    <!-- table des matière -->
-    <div class="tableMat">
-        <p class="firaCodeMenu">+---------------+</p>
-        <p class="firaCodeMenu">| href=”#”      |</p>
-        <p class="firaCodeMenu">+---------------+</p>
-        <p class="firaCodeMenu">| <a href="#whoami">Qui suis-je ?</a> |</p>
-        <p class="firaCodeMenu">| <a href="#mesProjets">Mes projets</a>   |</p>
-        <p class="firaCodeMenu">+---------------+</p>
+    <div class="navbar">
+        <a href="competences.html#conpetencesContainer">Mes competences</a>
+        <a id="selected" href="index.html#selected">Présentation</a>
+        <a href="projets.html#selected">Mes projets</a>
     </div>
+
     
     <!-- partie qui suis-je-->
     <p class="whoami" id="whoami">Qui suis-je ?</p>
@@ -64,123 +61,24 @@
                 <p>tel : 06 24 26 03 22</p>
             </div>
         </div>
+    </div>
 
+    <div class="formContainer">
+        
+        <form action="https://formspree.io/f/xgvkjzyn" method="POST">
+            <h1>envoyer moi un message</h1>
+            <label>
+                votre email:
+                <input type="email" name="email">
+              </label>
+              <label>
+                votre message:
+                <textarea name="message"></textarea>
+              </label>
+              <button type="submit">envoyer</button>
+        </form>
     </div>
     
-    <!-- Mes projets-->
-    <p class="mesProjets" id="mesProjets">Mes projets</p>
-
-    <div class="projet" style="padding-top: 0px;">
-        <img src="img/GDCBot.png" alt="commande envoyé au bot">
-        <div>
-            <div class="projetDesc">
-                <h2 class="projetTitre">Mai-Novembre 2023 - GDCBot </h2>
-                <p>bot discord de mise en forme de json renvoyé par l’API de Clash of Clan</p>
-                <div>
-                    <p>compétences acquises :</p>
-                    <ul>
-                        <li>base python</li>
-                        <li>requêtes à une API</li>
-                        <li>SQL avec SQLite</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/oXoGus/GDCBot" target="_blank" rel="noopener noreferrer">voir sur GitHub</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="projetReverse">
-        <div>
-            <div class="projetDesc">
-                <h2 class="projetTitre">Février-juin 2024 - BeHappy</h2>
-                <p>Projet du grand Oral de STI2D <br> création d’un dashboard pour la ruche connectée du lycée en React <br> avec une API Express.js pour le back-end sur un raspberry pi</p>
-                <div>
-                    <p>compétences acquises :</p>
-                    <ul>
-                        <li>base de Javascipt/React</li>
-                        <li>Express.js</li>
-                        <li>base de données MariaDB</li>
-                        <li>initiation Linux</li>
-                        <li>server Apache</li>
-                    </ul>
-                </div>
-
-                <p>voir sur GitHub :<a href="https://github.com/oXoGus/beeHappyData" target="_blank" rel="noopener noreferrer">le front-end</a> et<a href="https://github.com/oXoGus/beeHappyBackend" target="_blank" rel="noopener noreferrer">le back-end</a></p>
-            </div>
-        </div>
-        <img src="img/BeHappy.png" alt="page de connexion au dashboard">
-    </div>
-
-    <div class="projet">
-        <img src="img/bcm.png" alt="page d'un joueur">
-        <div>
-            <div class="projetDesc">
-                <h2 class="projetTitre">Juillet-Août 2024 - BetterClanMate </h2>
-                <p>Site React qui avec l’API de Clash of Clan, permet de rechercher des joueurs</p>
-                <div>
-                    <p>compétences acquises :</p>
-                    <ul>
-                        <li>base de HTML/CSS</li>
-                        <li>React</li>
-                        <li>Initiation à l’UI/UX</li>
-                        <li>base de données MariaDB</li>
-                        <li>server nginx</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/oXoGus/GDCBot" target="_blank" rel="noopener noreferrer">voir sur GitHub</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="projetReverse">
-        <div>
-            <div class="projetDesc">
-                <h2 class="projetTitre">1<sup>er</sup> semestre 2024 - Tetris </h2>
-                <p>Jeu Tetris avec tout un tas de variantes en python avec le module graphique fltk </p>
-                <div>
-                    <p>compétences acquises :</p>
-                    <ul>
-                        <li>python</li>
-                        <li>UI/UX</li>
-                        <li>module fltk et tkinter</li>
-                        <li>travail à plusieurs</li>
-                    </ul>
-                </div>
-
-                <p><a href="https://github.com/oXoGus" target="_blank" rel="noopener noreferrer">voir sur GitHub - soon</a></p>
-            </div>
-        </div>
-        <img src="img/Tetris.png" alt="page de connexion au dashboard">
-    </div>
-
-
-    <div class="projet">
-        
-        <!-- metre l'image du site quand il sera prêt-->
-        <div class="soon">
-            Soon
-        </div>
-        <div>
-            <div class="projetDesc">
-                <h2 class="projetTitre">Année scolaire 2024 - 2025 <br> projet UNESCO </h2>
-                <p>Site dynamique sur la ville de Kyoto et qui a pour objectif,<br> la médiation culturelle et numérique</p>
-                <div>
-                    <p>compétences acquises :</p>
-                    <ul>
-                        <li>chef de projet</li>
-                        <li>HTML/CSS/JS/PHP</li>
-                        <li>UI/UX</li>
-                        <li>base de données MariaDB</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/oXoGus" target="_blank" rel="noopener noreferrer">voir sur GitHub - soon</a>
-            </div>
-        </div>
-    </div>
-
     <p class="footerTitre">Me contacter</p>
     <footer>
         <p><a href="mailto:mathis.dintrat@gmail.com">mathis.dintrat@gmail.com</a></p>
