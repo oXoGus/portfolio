@@ -76,6 +76,83 @@ body {
   justify-content: space-around;
 }
 
+
+
+.parcoursContainer {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.parcoursContainer .friseContainer {
+  position: relative;
+  width: 33%;
+  padding: 25px;
+  background-color: #00006C;
+  color: #f9c87d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.friseContainer .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkblue;
+  border: #f9c87d solid 3px;
+  padding: 15px;
+  width: calc(100% - 36px);
+
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.titreParcours {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -66%);
+  text-align: center;
+  color: #f9c87d;
+  font-family: "Parisienne", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: calc(var(--fontSizeTableMat) + 15px);
+  margin-top: 0px;
+  letter-spacing: -1.5px;
+}
+
+
+.step h1 {
+  color: #f9c87d;
+  margin-bottom: 0px;
+  font-size: calc(var(--fontSizeTableMat));
+}
+
+.step p {
+  margin-top: 10px;
+  color: blanchedalmond;
+  font-size: calc(var(--fontSizeTableMat));
+  text-align: center;
+}
+
+
+.timeLine {
+  background-color: #FFD495;
+  width: 6px;
+  margin-top: 14;
+  margin-bottom: 14;
+}
+
+
+
+
+
+
 .formContainer {
   font-family: "Source Serif 4", serif;
   font-optical-sizing: auto;
