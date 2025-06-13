@@ -111,6 +111,19 @@ body {
   margin-bottom: 7px;
 }
 
+.stepFutur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkblue;
+  border: #f9c87d dashed 3px;
+  padding: 15px;
+  width: calc(100% - 36px);
+
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
 .titreParcours {
   position: absolute;
   top: 0;
