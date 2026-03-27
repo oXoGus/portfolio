@@ -1,472 +1,1481 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Code&family=Pacifico&family=Parisienne&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Code&family=Pacifico&family=Parisienne&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Mathis DINTRAT</title>
-</head>
-<body>
-    
-    <div class="titre">
-        <p class="parisienneTitre">Mathis</p>
-        <p class="sourceTitre">DINTRAT</p>
+
+    <style>
+      :root {
+        --font-sizeTitle: 280px;
+        --whoamiTextSize: 24px;
+        --titreSize: 54px;
+        --whoamiTitreCol: #f9c87d;
+        --backScale: scale(0.8);
+        --fontSizeTableMat: 25px;
+        --titreMarginTopPrenom: -30px;
+        --titreMarginTopNom: -150px;
+        --titreMarginBottomNom: -44px;
+      }
+      @media screen and (max-width: 1200px) {
+        :root {
+          --font-sizeTitle: 280px;
+          --fontSizeTableMat: 20px;
+        }
+      }
+      @media screen and (max-width: 1150px) {
+        :root {
+          --font-sizeTitle: 260px;
+          --titreMarginTopPrenom: 0px;
+          --titreMarginTopNom: -140px;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        :root {
+          --font-sizeTitle: 250px;
+          --titreMarginTopNom: -130px;
+        }
+      }
+      @media screen and (max-width: 1050px) {
+        :root {
+          --font-sizeTitle: 240px;
+          --titreMarginTopNom: -125px;
+          --titreMarginBottomNom: -40px;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        :root {
+          --font-sizeTitle: 225px;
+          --titreMarginTopNom: -120px;
+          --titreMarginBottomNom: -30px;
+        }
+      }
+      @media screen and (max-width: 950px) {
+        :root {
+          --font-sizeTitle: 210px;
+          --titreMarginTopNom: -115px;
+          --titreMarginBottomNom: -20px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        :root {
+          --font-sizeTitle: 195px;
+          --titreMarginTopNom: -110px;
+          --titreMarginBottomNom: -10px;
+        }
+      }
+      @media screen and (max-width: 850px) {
+        :root {
+          --font-sizeTitle: 185px;
+          --titreMarginTopNom: -105px;
+          --titreMarginBottomNom: 0px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        :root {
+          --font-sizeTitle: 175px;
+          --titreMarginTopNom: -100px;
+          --titreMarginBottomNom: 10px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        :root {
+          --font-sizeTitle: 165px;
+          --backScale: scale(0.7);
+          --titreMarginTopNom: -95px;
+          --titreMarginBottomNom: 20px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        :root {
+          --font-sizeTitle: 155px;
+          --whoamiTextSize: 10px;
+          --titreMarginTopNom: -90px;
+          --titreMarginBottomNom: 40px;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        :root {
+          --font-sizeTitle: 145px;
+          --whoamiTextSize: 20px;
+          --titreMarginTopNom: -85px;
+          --titreMarginBottomNom: 60px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        :root {
+          --font-sizeTitle: 135px;
+          --titreMarginTopNom: -80px;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        :root {
+          --font-sizeTitle: 125px;
+          --whoamiTextSize: 10px;
+          --titreSize: 34px;
+          --fontSizeTableMat: 13px;
+          --titreMarginTopNom: -75px;
+          --titreMarginBottomNom: 70px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        :root {
+          --font-sizeTitle: 110px;
+          --fontSizeTableMat: 10px;
+          --titreMarginTopNom: -70px;
+          --titreMarginBottomNom: 85px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        :root {
+          --font-sizeTitle: 100px;
+          --fontSizeTableMat: 8px;
+          --titreMarginTopNom: -60px;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        :root {
+          --font-sizeTitle: 60px;
+          --titreSize: 24px;
+          --fontSizeTableMat: 5px;
+          --titreMarginTopNom: -40px;
+        }
+      }
+
+      .overlayBlur {
+        display: none;
+        opacity: 0;
+      }
+      .overlayBlur.show {
+        display: flex !important;
+        opacity: 1 !important;
+      }
+      .overlayBlur.show .popup {
+        transform: scale(1) !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#00008b] m-0">
+    <div class="flex flex-col items-center text-[#f9c87d]">
+      <p
+        class="font-['Parisienne'] font-normal text-[calc(var(--font-sizeTitle)+20px)] m-0 mt-[var(--titreMarginTopPrenom)]"
+      >
+        Mathis
+      </p>
+      <p
+        class="font-['Source_Serif_4'] font-bold text-[calc(var(--font-sizeTitle)+1px)] mt-[var(--titreMarginTopNom)] mb-[var(--titreMarginBottomNom)]"
+      >
+        DINTRAT
+      </p>
     </div>
 
-    <!-- flèche vers le bas pour dire aux utilisateur de scroller-->
-    <div class="fleche" style>
-        <svg width="46" height="46" viewBox="0 0 46 46" fill="#f9c87d" xmlns="http://www.w3.org/2000/svg"><rect x="8.48531" y="14.1421" width="32" height="12" transform="rotate(45 8.48531 14.1421)" fill="#FFEBCD"/><rect x="14.1422" y="36.7696" width="32" height="12" transform="rotate(-45 14.1422 36.7696)" fill="#FFEBCD"/></svg>
+    <div class="flex flex-col items-center mb-[30px] text-[#f9c87d]">
+      <svg
+        width="46"
+        height="46"
+        viewBox="0 0 46 46"
+        fill="#f9c87d"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="8.48531"
+          y="14.1421"
+          width="32"
+          height="12"
+          transform="rotate(45 8.48531 14.1421)"
+          fill="#FFEBCD"
+        />
+        <rect
+          x="14.1422"
+          y="36.7696"
+          width="32"
+          height="12"
+          transform="rotate(-45 14.1422 36.7696)"
+          fill="#FFEBCD"
+        />
+      </svg>
     </div>
 
-    <div class="navbar">
-        <a id="selected" href="competences.html#competencesContainer">Mes competences</a>
-        <a  href="index.html#selected">Présentation</a>
-        <a href="projets.html#projetsContainer">Mes projets</a>
+    <div
+      class="bg-[#00006c] sticky top-0 z-[900] flex w-full items-baseline justify-around"
+    >
+      <a
+        id="selected"
+        class="no-underline font-['Source_Serif_4'] py-[10px] flex-1 text-center text-[#f9c87d] border-b-3 border-[#f9c87d] text-[calc(var(--whoamiTextSize)+10px)]"
+        href="competences.html#competencesContainer"
+        >Mes competences</a
+      >
+      <a
+        class="no-underline font-['Source_Serif_4'] py-[10px] flex-1 text-center text-[#ffebcd] text-[length:var(--whoamiTextSize)] hover:text-[#f9c87d] transition-colors duration-400"
+        href="index.html#selected"
+        >Présentation</a
+      >
+      <a
+        class="no-underline font- py-[10px] font-['Source_Serif_4'] flex-1 text-center text-[#ffebcd] text-[length:var(--whoamiTextSize)] hover:text-[#f9c87d] transition-colors duration-400"
+        href="projets.html#projetsContainer"
+        >Mes projets</a
+      >
     </div>
 
-
-    <div id="popupJava" class="overlayBlur" onclick="closePopup(event, 'popupJava')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/java.svg" alt="">
-            <h1>Java</h1>
+    <div
+      id="popupJava"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupJava')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/java.svg" alt="" />
+          <h1 class="m-0">Java</h1>
         </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-            <li><a href="projets.html?id=Yams">Yam's</a></li>
-            <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
-            </ul>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=Yams"
+                >Yam's</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=PizzaBuilder"
+                >PizzaBuilder</a
+              >
+            </li>
+          </ul>
         </div>
-        </div>
-    </div>
-    
-    <div id="popupTailwindCSS" class="overlayBlur" onclick="closePopup(event, 'popupTailwindCSS')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/Tailwind_CSS_Logo 1.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projet :</h1>
-            <ul>
-                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupC++" class="overlayBlur" onclick="closePopup(event, 'popupC++')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/c++.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="https://github.com/oXoGus/PAMI2025">PAMI - coupe de France de robotique</a></li>
-                <li><a href="https://github.com/oXoGus/SIN-projet-space-invader">Space invader</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupC" class="overlayBlur" onclick="closePopup(event, 'popupC')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/C.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="https://github.com/oXoGus/calcPolyC">calculatrice de polynomes</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupJS" class="overlayBlur" onclick="closePopup(event, 'popupJS')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/js.svg" alt="">
-            <h1>JavaScript</h1>
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-                <li><a href="projets.html?id=Daktari">Daktari</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupPHP" class="overlayBlur" onclick="closePopup(event, 'popupPHP')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/php.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=Daktari">Daktari</a></li>
-                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupPostgreSQL" class="overlayBlur" onclick="closePopup(event, 'popupPostgreSQL')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/postgresql.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=Daktari">Daktari</a></li>
-                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupPython" class="overlayBlur" onclick="closePopup(event, 'popupPython')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/Python.svg" alt="">
-            <h1>Python</h1>
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=Tetris">tetris</a></li>
-                <li><a href="https://github.com/oXoGus/SAE-2.02">Algo sur des graphs</a></li>
-                <li><a href="projets.html?id=GDCBot">GDCBot</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupReact" class="overlayBlur" onclick="closePopup(event, 'popupReact')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/react.svg" alt="">
-            <h1>React</h1>
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
-                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupNode" class="overlayBlur" onclick="closePopup(event, 'popupNode')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/nodejs.svg" alt="">
-            <h1>Node.js</h1>
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
-                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupLinux" class="overlayBlur" onclick="closePopup(event, 'popupLinux')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/linux.svg" alt="">
-            <h1>Linux</h1>
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projet :</h1>
-            <ul>
-                <li>tous les projets ont été réalisé sur linux</li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupHTML" class="overlayBlur" onclick="closePopup(event, 'popupHTML')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/HTML.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Intermédiaire</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-                <li><a href="projets.html?id=Daktari">Daktari</a></li>
-                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
-                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupCSS" class="overlayBlur" onclick="closePopup(event, 'popupCSS')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/CSS.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Intermédiaire</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-                <li><a href="projets.html?id=Daktari">Daktari</a></li>
-                <li><a href="projets.html?id=BetterClanMate">BetterClanMate</a></li>
-                <li><a href="projets.html?id=BeeHappy">BeeHappy</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupJavaFX" class="overlayBlur" onclick="closePopup(event, 'popupJavaFX')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <img src="img/JavaFX.svg" alt="">
-        </div>
-        <div>
-            <h1>Niveau : </h1>
-            <p>Débutant</p>
-            <h1 style="margin-top: 20px;">Projet :</h1>
-            <ul>
-                <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
-            </ul>
-        </div>
-        </div>
+      </div>
     </div>
 
-    <div class="competencesContainer">
-        <h1>Mes connaissances techniques</h1>
-        <div id="javaBtn" tabindex="0" role="button" onclick="openPopup('popupJava')" class="competence">
-            <img src="img/java.svg" alt="">
+    <div
+      id="popupTailwindCSS"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupTailwindCSS')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/Tailwind_CSS_Logo 1.svg" alt="" />
         </div>
-        <div id="Tailwind_CSSBtn" tabindex="0" role="button" onclick="openPopup('popupTailwindCSS')" class="competence">
-            <img src="img/Tailwind_CSS.svg" alt="">
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projet :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BetterClanMate"
+                >BetterClanMate</a
+              >
+            </li>
+          </ul>
         </div>
-        <div id="c++Btn" tabindex="0" role="button" onclick="openPopup('popupC++')" class="competence">
-            <img src="img/c++.svg" alt="">
-        </div>
-        <div id="CBtn" tabindex="0" role="button" onclick="openPopup('popupC')" class="competence">
-            <img src="img/C.svg" alt="">
-        </div>
-        <div id="jsBtn" tabindex="0" role="button" onclick="openPopup('popupJS')" class="competence">
-            <img src="img/js.svg" alt="">
-        </div>
-        <div id="phpBtn" tabindex="0" role="button" onclick="openPopup('popupPHP')" class="competence">
-            <img src="img/php.svg" alt="">
-        </div>
-        <div id="postgresqlBtn" tabindex="0" role="button" onclick="openPopup('popupPostgreSQL')" class="competence">
-            <img src="img/postgresql.svg" alt="">
-        </div>
-        <div id="pythonBtn" tabindex="0" role="button" onclick="openPopup('popupPython')" class="competence">
-            <img src="img/Python.svg" alt="">
-        </div>
-        <div id="reactBtn" tabindex="0" role="button" onclick="openPopup('popupReact')" class="competence">
-            <img src="img/react.svg" alt="">
-        </div>
-        <div id="nodeBtn" tabindex="0" role="button" onclick="openPopup('popupNode')" class="competence">
-            <img src="img/nodejs.svg" alt="">
-        </div>
-        <div id="linuxBtn" tabindex="0" role="button" onclick="openPopup('popupLinux')" class="competence">
-            <img src="img/linux.svg" alt="">
-        </div>
-        <div id="htmlBtn" tabindex="0" role="button" onclick="openPopup('popupHTML')" class="competence">
-            <img src="img/HTML.svg" alt="">
-        </div>
-        <div id="cssBtn" tabindex="0" role="button" onclick="openPopup('popupCSS')" class="competence">
-            <img src="img/CSS.svg" alt="">
-        </div>
-        <div id="javafxBtn" tabindex="0" role="button" onclick="openPopup('popupJavaFX')" class="competence">
-            <img src="img/JavaFX.svg" alt="">
-        </div>
+      </div>
     </div>
 
+    <div
+      id="popupC++"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupC++')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/c++.svg" alt="" />
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="https://github.com/oXoGus/PAMI2025"
+                >PAMI - coupe de France de robotique</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="https://github.com/oXoGus/SIN-projet-space-invader"
+                >Space invader</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <div id="popupRealiser" class="overlayBlur" onclick="closePopup(event, 'popupRealiser')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <p>Réaliser</p>
+    <div
+      id="popupC"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupC')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/C.svg" alt="" />
         </div>
-        <div>
-            <h1>Niveau 1 :</h1>
-            <p>Développer des applications informatiques simples</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-            <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-            <li><a href="projets.html?id=Daktari">Daktari</a></li>
-            <li><a href="projets.html?id=Yams">Yam's</a></li>
-            <li><a href="projets.html?id=Tetris">Tetris</a></li>
-            <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-            <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
-            </ul>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="https://github.com/oXoGus/calcPolyC"
+                >calculatrice de polynomes</a
+              >
+            </li>
+          </ul>
         </div>
-        </div>
+      </div>
     </div>
-    
-    <div id="popupCollaborer" class="overlayBlur" onclick="closePopup(event, 'popupCollaborer')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <p>Collaborer</p>
-        </div>
-        <div>
-            <h1>Niveau 1 :</h1>
-            <p>Identifier ses aptitudes pour travailler dans une équipe</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-            <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-            <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupGerer" class="overlayBlur" onclick="closePopup(event, 'popupGerer')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <h1>Gérer</h1>
-        </div>
-        <div>
-            <h1>Niveau 1 :</h1>
-            <p>Concevoir et mettre en place une base de données à partir d’un cahier des charges </p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-                <li><a href="projets.html?id=Daktari">Daktari</a></li>
-                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupAdministrer" class="overlayBlur" onclick="closePopup(event, 'popupAdministrer')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <p>Administrer</p>
-        </div>
-        <div>
-            <h1>Niveau 1 :</h1>
-            <p>Installer et configurer un poste de travail</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-            <li>DualBoot linux</li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupOptimiser" class="overlayBlur" onclick="closePopup(event, 'popupOptimiser')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <p>Optimiser</p>
-        </div>
-        <div>
-            <h1>Niveau 1 :</h1>
-            <p>Appréhender et construire des algorithmes</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-            <li><a href="https://github.com/oXoGus/SAE-2.02">Algo sur des graphs</a></li>
-            <li><a href="projets.html?id=Tetris">Tetris</a></li>
-        </ul>
-        </div>
-        </div>
-    </div>
-    
-    <div id="popupConduire" class="overlayBlur" onclick="closePopup(event, 'popupConduire')">
-        <div class="popup" onclick="event.stopPropagation()">
-        <div>
-            <p>Conduire</p>
-        </div>
-        <div>
-            <h1>Niveau 1 :</h1>
-            <p>Identifier les besoins métiers des clients et des utilisateurs</p>
-            <h1 style="margin-top: 20px;">Projets :</h1>
-            <ul>
-                <li><a href="projets.html?id=UNESCO">projet UNESCO - Kyoto</a></li>
-                <li><a href="projets.html?id=Daktari">Daktari</a></li>
-                <li><a href="projets.html?id=Yams">Yam's</a></li>
-                <li><a href="projets.html?id=Tetris">Tetris</a></li>
-                <li><a href="projets.html?id=SeniorNextDoor">SeniorNextDoor</a></li>
-                <li><a href="projets.html?id=PizzaBuilder">PizzaBuilder</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-  
 
-    
-
-    <div id="competencesContainer" class="competencesContainer">
-        <h1 id="compBUT">Compétences du BUT INFORMATIQUE </h1>
-        <div id="gererBtn" tabindex="0" role="button" onclick="openPopup('popupGerer')" class="competenceBO">
-            <p>Gérer</p>
+    <div
+      id="popupJS"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupJS')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/js.svg" alt="" />
+          <h1 class="m-0">JavaScript</h1>
         </div>
-        <div id="collaborerBtn" tabindex="0" role="button" onclick="openPopup('popupCollaborer')" class="competenceBO">
-            <p>Collaborer</p>        
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=SeniorNextDoor"
+                >SeniorNextDoor</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=Daktari"
+                >Daktari</a
+              >
+            </li>
+          </ul>
         </div>
-        <div id="realiserBtn" tabindex="0" role="button" onclick="openPopup('popupRealiser')" class="competenceBO">
-            <p>Réaliser</p>
-        </div>
-        <div id="administrerBtn" tabindex="0" role="button" onclick="openPopup('popupAdministrer')" class="competenceBO">
-            <p>Administrer</p>
-        </div>
-        <div id="optimiserBtn" tabindex="0" role="button" onclick="openPopup('popupOptimiser')" class="competenceBO">
-            <p>Optimiser</p>
-        </div>
-        <div id="conduireBtn" tabindex="0" role="button" onclick="openPopup('popupConduire')" class="competenceBO">
-            <p>Conduire</p>
-        </div>
+      </div>
     </div>
-    
 
+    <div
+      id="popupPHP"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupPHP')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/php.svg" alt="" />
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=Daktari"
+                >Daktari</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=SeniorNextDoor"
+                >SeniorNextDoor</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=UNESCO"
+                >projet UNESCO - Kyoto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <p class="footerTitre">Me contacter</p>
-    <footer>
-        <p><a href="mailto:mathis.dintrat@gmail.com">mathis.dintrat@gmail.com</a></p>
-        <p><a href="/portfolio/CV - Mathis DINTRAT.pdf" download="/portfolio/CV - Mathis DINTRAT.pdf" target="_blank" rel="noopener noreferrer">téléchager mon CV</a></p>
-        <p><a href="https://www.linkedin.com/in/mathis-dintrat-09747331b/" target="_blank" rel="noopener noreferrer">mon Linkedin</a></p>
-        <p>tel : 06 24 26 03 22</p>
+    <div
+      id="popupPostgreSQL"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupPostgreSQL')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/postgresql.svg" alt="" />
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=Daktari"
+                >Daktari</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=SeniorNextDoor"
+                >SeniorNextDoor</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=UNESCO"
+                >projet UNESCO - Kyoto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupPython"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupPython')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/Python.svg" alt="" />
+          <h1 class="m-0">Python</h1>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=Tetris"
+                >tetris</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="https://github.com/oXoGus/SAE-2.02"
+                >Algo sur des graphs</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=GDCBot"
+                >GDCBot</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupReact"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupReact')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/react.svg" alt="" />
+          <h1 class="m-0">React</h1>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BetterClanMate"
+                >BetterClanMate</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BeeHappy"
+                >BeeHappy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupNode"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupNode')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/nodejs.svg" alt="" />
+          <h1 class="m-0">Node.js</h1>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BetterClanMate"
+                >BetterClanMate</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BeeHappy"
+                >BeeHappy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupLinux"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupLinux')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/linux.svg" alt="" />
+          <h1 class="m-0">Linux</h1>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projet :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">tous les projets ont été réalisé sur linux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupHTML"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupHTML')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/HTML.svg" alt="" />
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Intermédiaire
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=UNESCO"
+                >projet UNESCO - Kyoto</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=SeniorNextDoor"
+                >SeniorNextDoor</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=Daktari"
+                >Daktari</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BetterClanMate"
+                >BetterClanMate</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BeeHappy"
+                >BeeHappy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupCSS"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupCSS')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/CSS.svg" alt="" />
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Intermédiaire
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=UNESCO"
+                >projet UNESCO - Kyoto</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=SeniorNextDoor"
+                >SeniorNextDoor</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=Daktari"
+                >Daktari</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BetterClanMate"
+                >BetterClanMate</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=BeeHappy"
+                >BeeHappy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupJavaFX"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupJavaFX')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <img src="img/JavaFX.svg" alt="" />
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <h1 class="m-0">Niveau :</h1>
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Débutant
+          </p>
+          <h1 class="m-0 mt-[20px]">Projet :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=PizzaBuilder"
+                >PizzaBuilder</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="relative mt-[100px] flex flex-wrap justify-center p-[50px] bg-[#00006c]"
+    >
+      <h1
+        class="absolute top-0 font-['Parisienne'] font-semibold text-[#f9c87d] tracking-[-1.1px] text-[calc(var(--fontSizeTableMat)+25px)] m-0 -translate-y-[55%]"
+      >
+        Mes connaissances techniques
+      </h1>
+
+      <button
+        id="javaBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupJava')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/java.svg" alt="" />
+      </button>
+      <button
+        id="Tailwind_CSSBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupTailwindCSS')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/Tailwind_CSS.svg" alt="" />
+      </button>
+      <button
+        id="c++Btn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupC++')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/c++.svg" alt="" />
+      </button>
+      <button
+        id="CBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupC')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/C.svg" alt="" />
+      </button>
+      <button
+        id="jsBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupJS')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/js.svg" alt="" />
+      </button>
+      <button
+        id="phpBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupPHP')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/php.svg" alt="" />
+      </button>
+      <button
+        id="postgresqlBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupPostgreSQL')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/postgresql.svg" alt="" />
+      </button>
+      <button
+        id="pythonBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupPython')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/Python.svg" alt="" />
+      </button>
+      <button
+        id="reactBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupReact')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/react.svg" alt="" />
+      </button>
+      <button
+        id="nodeBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupNode')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/nodejs.svg" alt="" />
+      </button>
+      <button
+        id="linuxBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupLinux')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/linux.svg" alt="" />
+      </button>
+      <button
+        id="htmlBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupHTML')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/HTML.svg" alt="" />
+      </button>
+      <button
+        id="cssBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupCSS')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/CSS.svg" alt="" />
+      </button>
+      <button
+        id="javafxBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupJavaFX')"
+        class="flex h-[130px] w-[100px] p-[14px] m-[14px] flex-row justify-center bg-[#00008b] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <img class="w-full h-auto" src="img/JavaFX.svg" alt="" />
+      </button>
+    </div>
+
+    <button
+      id="popupRealiser"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999] appearance-none border-none outline-none"
+      onclick="closePopup(event, 'popupRealiser')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <p class="text-[calc(var(--fontSizeTableMat)+10px)] m-[5px]">
+            Réaliser
+          </p>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-start text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Partir des exigences et aller jusqu’à une application complète
+          </p>
+          <h1 class="m-0 mt-[20px]">Apprentissages critiques :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd] list-disc text-start">
+            <li class="mb-[8px]">
+              AC21.01 - Dans le projet
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px] bg-[darkblue]"
+                href="projets.html?id=TableauLEGO"
+                >Tableau LEGO</a
+              >
+              j'ai pu élaborer et implémenter des spécifications fonctionnels et
+              non fonctionnel à partir de cahier des charges
+            </li>
+            <li class="mb-[8px]">
+              AC21.2 - Nous avons appliqué les principes d'ergonomie et design
+              au projet
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=UNESCO"
+                >Tableau LEGO</a
+              >
+            </li>
+            <li class="mb-[8px]">
+              Dans la matière R03.01 developpement web j'ai pu voir les bonnes
+              pratiques de conceptions en étant sensibilisé a la securité des
+              application web (hashage, verification des entrées utilisateurs,
+              ...).
+            </li>
+            <li class="mb-2">
+              J'ai appris a faire un cahier de test pour verifier la qualité des
+              application nous réalisons dans la matière R3.04 Qualité de
+              développement
+            </li>
+          </ul>
+        </div>
+      </div>
+    </button>
+
+    <div
+      id="popupCollaborer"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupCollaborer')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <p class="text-[calc(var(--fontSizeTableMat)+10px)] m-[5px]">
+            Collaborer
+          </p>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Situer son rôle et ses missions au sein d’une équipe informatique
+          </p>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=UNESCO"
+                >projet UNESCO - Kyoto</a
+              >
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupGerer"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupGerer')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <h1 class="m-0 text-[calc(var(--fontSizeTableMat)+10px)]">Gérer</h1>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Optimiser une base de données, interagir avec une application et
+            mettre en œuvre la sécurité
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              Dans le cours R3.07 SQL ddans un langage de programmation, nous
+              avons vu comment utiliser des index pour optimiser les recherches
+              dans une base de données relationnel, nous avons aussi vu comment
+              assurer l'intégrité des données en utilisant des transactions
+            </li>
+            <li class="mb-2">
+              Dans le
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=projetFacture"
+                >projet facture</a
+              >
+              nous avons pu mettre en place une migration de base de données en
+              utilisant des procédures stockée et en ajoutant des trigger pour
+              s'assurer de l'intégrité des données
+            </li>
+            <li class="mb-2">
+              Avec le cours R4.03 Qualité au-delà du relationnel nous avons
+              découverts les base de données non relationnel avec MongoDB, nous
+              avons pu mettre en pratique grace au projet
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=projetFacture"
+                >TranWay</a
+              >
+              qui utilise une base de donnée non-relationnel
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupAdministrer"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupAdministrer')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <p class="text-[calc(var(--fontSizeTableMat)+10px)] m-[5px]">
+            Administrer
+          </p>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Déployer des services dans une architecture réseau
+          </p>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-2">
+              Dans la matière R3.06 nous avons mis en place et configurer des
+              différents serveur (web, proxy...) sur des machines virtuelle en
+              TP.
+            </li>
+            <li class="mb-[8px]">
+              Dans la matière R3.05 Programmation système, nous avons pu
+              découvir comment les application peuvent communiquer entre elles
+              en utilisant des mécanismes bas niveaux (pipes, fichier,
+              stdout...) nous avons pratiqué avec des TP.
+            </li>
+            <li class="mb-2">
+              Dans le projet
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=SeniorNextDoor"
+                >TranWay</a
+              >
+              nous avons utilisé des token JWT pour sécuriser la communication
+              entre le front-end et l'API.
+            </li>
+            <li class="mb-2">
+              Pendant le cours R4.08 Virtualisation, nous avons étudié les
+              algorithmes de chiffrement (symétrique/asymétrique,
+              Diffie-Hellman) utilisé pour sécuriser les communication.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupOptimiser"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupOptimiser')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <p class="text-[calc(var(--fontSizeTableMat)+10px)] m-[5px]">
+            Optimiser
+          </p>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Sélectionner les algorithmes adéquats pour répondre à un problème
+            donné
+          </p>
+          <h1 class="m-0 mt-[20px]">Projets :</h1>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              Grace a la matière R3.02 Dévellopement efficace, j'ai pu découvrir
+              découvrir et mettre en pratique différentes structure de données
+              pour répondre a des problèmes spécifiques (arbre, liste chaînée,
+              dictionnaire).
+            </li>
+            <li class="mb-2">
+              Avec la matière R4.04 Méthode d'optimisation, j'ai pu utiliser des
+              techniques algorithmique comme la recherche par dichotomie pour
+              résoudre des problèmes complèxe (les tour de hanoi)
+            </li>
+            <li class="mb-2">
+              J'ai pu mettre en pratique ces structures de données et
+              algorithmes via la création d'un programme pour paver une image
+              avec des briques de bonnes couleurs de manière optimale et qui
+              sera utilisé dans le projet
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=TableauLEGO"
+                >Tableau LEGO</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="popupConduire"
+      class="overlayBlur fixed top-0 left-0 w-full h-full backdrop-blur-[2.5px] bg-black/30 justify-center items-center transition-opacity duration-200 z-[999]"
+      onclick="closePopup(event, 'popupConduire')"
+    >
+      <div
+        class="popup border-3 border-[#f9c87d] bg-[#00006c] py-[20px] text-[#f9c87d] rounded-none shadow-[0_0_10px_rgba(0,0,0,0.2)] scale-80 transition-transform duration-200 flex w-[80%] md:w-[36%] flex-wrap whitespace-normal"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          class="flex-1 flex flex-col items-center justify-center w-1/2 text-wrap border-r-3 border-[#f9c87d] translate-x-[3px] pb-[30px]"
+        >
+          <p class="text-[calc(var(--fontSizeTableMat)+10px)] m-[5px]">
+            Conduire
+          </p>
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-center w-1/2 text-wrap mx-[25px] my-0 border-t-3 border-[#f9c87d] -translate-y-[23px] pt-[14px]"
+        >
+          <p
+            class="mt-0 text-[#ffebcd] font-light text-[calc(var(--fontSizeTableMat)-5px)] mb-0"
+          >
+            Appliquer une démarche de suivi de projet en fonction des besoins
+            métiers des clients et des utilisateur
+          </p>
+          <ul class="pl-[25px] mt-[5px] text-[#ffebcd]">
+            <li class="mb-[8px]">
+              Dans la matière R3.10 Management des système d'information, au
+              travert de cours et de TD nous avons pu identifier les processsus
+              présents dans une organisation pour améliorer les systèmes
+              d'informations.
+            </li>
+            <li class="mb-2">
+              Dans la partie Java du projet
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=TableauLEGO"
+                >Tableau LEGO</a
+              >
+              nous avons du formalisé les besoins pour cette partie a partir
+              d'un cahier des charge souple
+            </li>
+            <li class="mb-2">
+              Lors du projet
+              <a
+                class="text-[#ffebcd] no-underline after:content-[''] after:inline-block after:w-[16px] after:h-[16px] after:bg-[url('img/open_in_new.svg')] after:bg-contain after:ml-[8px]"
+                href="projets.html?id=TableauLEGO"
+                >Tableau LEGO</a
+              >
+              nous avons pu mettre en place la méthode Agile pour le suivi de
+              projet. Cette démarche Agile Scrum
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="competencesContainer"
+      class="relative mt-[100px] flex flex-wrap justify-center p-[50px] bg-[#00006c]"
+    >
+      <h1
+        id="compBUT"
+        class="absolute top-0 text-[#f9c87d] tracking-[-1.1px] m-0 -translate-y-[55%] font-['Source_Serif_4'] font-bold text-[calc(var(--fontSizeTableMat)+20px)]"
+      >
+        Compétences du BUT INFORMATIQUE
+      </h1>
+
+      <button
+        id="gererBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupGerer')"
+        class="flex items-center bg-[#00008b] p-[14px] m-[28px] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <p
+          class="text-[#f9c87d] font-['Source_Serif_4'] text-[length:var(--fontSizeTableMat)] m-0"
+        >
+          Gérer
+        </p>
+      </button>
+      <button
+        id="collaborerBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupCollaborer')"
+        class="flex items-center bg-[#00008b] p-[14px] m-[28px] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <p
+          class="text-[#f9c87d] font-['Source_Serif_4'] text-[length:var(--fontSizeTableMat)] m-0"
+        >
+          Collaborer
+        </p>
+      </button>
+      <button
+        id="realiserBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupRealiser')"
+        class="flex items-center bg-[#00008b] p-[14px] m-[28px] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <p
+          class="text-[#f9c87d] font-['Source_Serif_4'] text-[length:var(--fontSizeTableMat)] m-0"
+        >
+          Réaliser
+        </p>
+      </button>
+      <button
+        id="administrerBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupAdministrer')"
+        class="flex items-center bg-[#00008b] p-[14px] m-[28px] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <p
+          class="text-[#f9c87d] font-['Source_Serif_4'] text-[length:var(--fontSizeTableMat)] m-0"
+        >
+          Administrer
+        </p>
+      </button>
+      <button
+        id="optimiserBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupOptimiser')"
+        class="flex items-center bg-[#00008b] p-[14px] m-[28px] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <p
+          class="text-[#f9c87d] font-['Source_Serif_4'] text-[length:var(--fontSizeTableMat)] m-0"
+        >
+          Optimiser
+        </p>
+      </button>
+      <button
+        id="conduireBtn"
+        tabindex="0"
+        role="button"
+        onclick="openPopup('popupConduire')"
+        class="flex items-center bg-[#00008b] p-[14px] m-[28px] transition-transform duration-100 ease-in hover:scale-125 cursor-pointer"
+      >
+        <p
+          class="text-[#f9c87d] font-['Source_Serif_4'] text-[length:var(--fontSizeTableMat)] m-0"
+        >
+          Conduire
+        </p>
+      </button>
+    </div>
+
+    <p
+      class="text-center text-[#ffd495] font-['Parisienne'] font-semibold text-[54px] m-0 tracking-[-1.5px] translate-y-[35px]"
+    >
+      Me contacter
+    </p>
+    <footer
+      class="pt-[15px] h-[100px] flex flex-row flex-wrap bg-[#00006c] justify-evenly items-center"
+    >
+      <p
+        class="m-0 font-['Crimson_Text'] font-semibold text-[20px] text-[#ffd495]"
+      >
+        <a
+          class="no-underline text-inherit hover:w-max hover:bg-[#00008b] transition-all duration-500 inline-block px-2"
+          href="mailto:mathis.dintrat@gmail.com"
+          >mathis.dintrat@gmail.com</a
+        >
+      </p>
+      <p
+        class="m-0 font-['Crimson_Text'] font-semibold text-[20px] text-[#ffd495]"
+      >
+        <a
+          class="no-underline text-inherit hover:w-max hover:bg-[#00008b] transition-all duration-500 inline-block px-2"
+          href="/portfolio/CV - Mathis DINTRAT.pdf"
+          download="/portfolio/CV - Mathis DINTRAT.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >téléchager mon CV</a
+        >
+      </p>
+      <p
+        class="m-0 font-['Crimson_Text'] font-semibold text-[20px] text-[#ffd495]"
+      >
+        <a
+          class="no-underline text-inherit hover:w-max hover:bg-[#00008b] transition-all duration-500 inline-block px-2"
+          href="https://www.linkedin.com/in/mathis-dintrat-09747331b/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >mon Linkedin</a
+        >
+      </p>
+      <p
+        class="m-0 font-['Crimson_Text'] font-semibold text-[20px] text-[#ffd495]"
+      >
+        tel : 06 24 26 03 22
+      </p>
     </footer>
+
     <script src="script/popup.js"></script>
-</body>
+  </body>
+</html>
